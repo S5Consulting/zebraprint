@@ -1,6 +1,6 @@
 var zebraprint = {
-    print: function (successCallback, errorCallback, strInput) {
-        cordova.exec(successCallback, errorCallback, "zebraprint", "print", [strInput]);
+    print: function (successCallback, errorCallback, mac, data) {
+        cordova.exec(successCallback, errorCallback, "zebraprint", "print", [mac, data]);
     }
 }
 
