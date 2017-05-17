@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.contoso.zebraprint"
+      version="0.1.0">
+    <name>zebraprint</name>
+    <description>zebraprint plugin for Apache Cordova</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="www/zebraprint.js" name="zebraprint">
+        <clobbers target="zebraprint" />
+    </js-module>
+
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="zebraprint">
+                <param name="wp-package" value="zebraprint"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/zebraprint.cs" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <config-file target="config.xml" parent="/*">
+            <feature name="zebraprint">
+                <param name="wp-package" value="zebraprint"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/zebraprint.cs" />
+    </platform>
+
+</plugin>
